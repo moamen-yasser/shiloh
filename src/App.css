@@ -590,6 +590,7 @@ footer .copyright p:nth-child(2) {
     margin: auto;
   }
   footer{
+    height:60dvh;
     background-color: #070707;
     padding:0px;
   }
