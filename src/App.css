@@ -1,38 +1,647 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  overflow-x: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  background-color: #070707;
+}
+/*  Start NavBar*/
+.navbar{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-color: #070707 !important;
+  z-index: 3;
+}
+.navbar .show .navlinks{
+  width: 100%;
+  background-color: #070707;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 200px;
+  justify-content: space-around !important;
+  text-align: center;
+}
+.navbar-toggler-icon {
+  color: white !important;
+}
+.navbar button{
+  background-color: rgba(164, 40, 24, 0.6);
+  backdrop-filter: blur(3px);
+  color: #f87765;
+}
+.navbar img {
+  width: 100px;
+}
+.navlinks {
+  width: 100%;
+}
+.navlinks a {
+  color: hsla(0, 0%, 100%, .75);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: all 0.5s ease-in-out;
+}
+.navlinks a:hover {
+  color: #f87765;
+  transform: scale(1.1);
+}
+/*  End NavBar*/
+
+
+/* Start Banner Section */
+.bannar {
+  background-color: #070707;
+  padding: 100px 0;
+}
+.bannar .bannartext {
+  padding-top: 100px;
+}
+.bannar .bannartext p {
+  color: #f87765;
+  font-weight: 600;
+}
+.bannar .bannartext p span {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.bannar .bannartext h1 ,.bannar .bannartext h2{
+  color: white;
+  margin: 15px 0;
+  font-size: 50px;
+}
+.bannar .bannartext h5 {
+  color: hsla(0, 0%, 100%, .75) !important;
+  margin: 20px 0;
+  font-size: 25px;
+}
+.bannar .bannartext button {
+  color: white;
+  background-color: #f87765;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 5px 20px;
+  margin-top: 20px;
+  border: none !important;
+}
+.bannar .bannarimgs {
+  position: relative;
+}
+.bannar .bannarimgs .waves {
+  width: 500px;
+}
+.bannar .bannarimgs .laptop {
+  width: 400px;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+}
+.bannar .imgbox {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(248, 119, 101, .2);
+  backdrop-filter: blur(3px);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.bannar .gimg {
+  left: 60px;
+  bottom: 150px;
+}
+.bannar .wimg {
+  left: 250px;
+  top: 50px;
+}
+.bannar .uimg {
+  right: 50px;
+  bottom: 120px;
+}
+.imgbox img {
+  width: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* End Banner Section */
+
+/*Start Home Section 2*/
+.homesec2{
+  background-color: #070707;
+}
+.homesec2 .row {
+  align-items: center;
+}
+.homesec2 .secimgs {
+  position: relative;
+}
+.homesec2 .waves {
+  width: 100%;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(23.279deg) skew(0deg, 0deg)
+}
+.homesec2 .people {
+  position: absolute;
+  width: 80%;
+  top: 25%;
+  left: 20%;
+}
+.homesec2 .sec2text button{
+  border: 1px solid #f87765;
+  border-radius: 10px;
+  padding: 5px 20px;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+.homesec2 .sec2text p{
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+/*End Home Section 2*/
+
+/*Start Home Section 3 */
+.homesec3{
+  background-color: #070707;
+}
+.homesec3 .sectext{
+  padding: 50px 100px;
+  display: flex;
+  align-items: baseline;
+}
+.homesec3 .sectext h3{
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+  margin-right: 30px;
+}
+.homesec3 .sectext a{
+  color: #f87765;
+  text-decoration: none;
+  font-size: 20px;
+}
+.homesec3 .swiper-slide {
+  padding: 20px;
+}
+.homesec3 .swiper-slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+.homesec3 .swiper-pagination-bullet {
+  background-color: #f87765;
+  height: 15px;
+  width: 15px;
+}
+.homesec3 .swiper-pagination {
+  bottom: 0 !important;
+}
+/*End Home Section 3 */
+
+/*Start Home Section 4*/
+.homesec4{
+  background-color: #070707;
+  padding: 100px;
+  position: relative;
+}
+.homesec4 h3{
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+.homesec4 .waves{
+  position: absolute;
+  top: 10%;
+  width: 50%;
+  left: 25%;
+  height: 80%;
+  object-fit: contain;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(19.9363deg) skew(0deg, 0deg);
+}
+.homesec4 .divLeft ,.homesec4 .divRight{
+  width: 50%;
+  background-color: rgba(248, 119, 101, .2);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+.homesec4 .divLeft img ,.homesec4 .divRight img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+.homesec4 .divLeft{
+  margin-right: auto;
+}
+.homesec4 .divRight{
+  margin-left: auto;
+}
+.homesec4 .divLeft h5,
+.homesec4 .divRight h5 {
+  color: white;
+}
+.homesec4 .divLeft p,
+.homesec4 .divRight p {
+  color: hsla(0, 0%, 100%, .75);
+}
+/*End Home Section 4*/
+
+
+/*start Home Section 5*/
+.homesec5{
+  background-color: #070707;
+  padding: 100px;
+  text-align: center;
+}
+.homesec5 h2{
+  color: White;
+  text-align: center;
+  font-size: 40px;
+}
+.homesec5 .col-md-4 div{
+  background-color: rgba(248, 119, 101, .2);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 30px 20px 50px;
+  height: 550px;
+  margin-top: 20px;
+}
+.homesec5 .divRight img{
+  width: 80%;
+  height: 300px;
+}
+.homesec5 .divRight h5{
+  color: #f87765;
+  font-weight: 400;
+  font-size: 18px;
+}
+.homesec5 .divRight h3{
+  color: white;
+  font-weight: 400;
+}
+.homesec5 .divRight p{
+  color: hsla(0, 0%, 100%, .75);
+  margin-top: 20px;
+}
+/*End Home Section 5*/
+
+/*Start Home Section 6*/
+.homesec6{
+  background-color: #070707;
+  padding: 100px;
+}
+.homesec6 h3{
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 30px;
+}
+.homesec6 div p{
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+}
+.homesec6 div span{
+  color: #f87765;
+  font-size: 25px;
+  padding-right: 10px;
+}
+.homesec6 form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  direction: ltr;
+}
+.homesec6 div form div input,
+.homesec6 form textarea{
+  width: 100%;
+  background-color: transparent;
+  border-radius: 60px;
+  border: 1px solid rgba(248, 118, 101, 0.463);
+  outline: none;
+  padding: 10px 16px;
+  margin: 20px 10px;
+  color: white;
+  font-size: 18px;
+}
+.homesec6 form textarea{
+  min-height: 200px;
+  max-height: 200px;
+}
+.homesec6 form input::placeholder,
+.homesec6 form textarea::placeholder {
+  color: rgb(223, 222, 222);
+  font-size: 20px;
+  text-align: left;
+  padding: 20px;
+}
+.homesec6 form button{
+  width: 250px;
+  color:white;
+  font-size: 18px;
+  font-weight: 600;
+  background-color:rgba(248, 118, 101, 0.463) ;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 0;
+  transition: all 1s ease-in-out;
+}
+.homesec6 form button:hover{
+  color: #f87765;
+  background-color: white;
+}
+
+/*End Home Section 6*/
+
+/*Start Footer*/
+footer{
+  background-color: #070707;
+  padding:50px;
+}
+footer img{
+  width: 100px;
+}
+footer a {
+  display: inline-block;
+  color: hsla(0, 0%, 100%, .75);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin:10px 5px;
+  transition: all 0.5s ease-in-out;
+}
+footer a:hover {
+  color: #f87765;
+  transform: scale(1.1);
+}
+footer .iconsdiv{
+  display: flex;
+  justify-content: flex-end;
+}
+footer .iconsdiv svg{
+  padding-left: 20px;
+  font-size: 55px;
+}
+footer .copyright{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  color: white;
+}
+footer .copyright p:nth-child(2) {
+  margin-left: 20px;
+}
+
+
+/*End Footer*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************/
+/*Start Projects Component*/
+.allprojectsec{
+  background-color: #070707;
+  padding: 50px;
+  position: relative;
+}
+.allprojectsec h3{
+  text-align: center;
+  color: #f87765;
+  font-size: 50px;
+  font-weight: 600;
+  padding: 0 0 50px 0;
+}
+.allprojectsec .card{
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 400px;
+  margin-bottom: 20px;
+  background-color: #1d1d1f;
+}
+.allprojectsec .card img{
+  width: 100%;
+  border-radius: 10px;
+}
+.allprojectsec .card h5 {
+  color: white;
+  font-size: 30px;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+.allprojectsec .card p{
+  color: rgb(223, 222, 222);
+  font-weight: 400;
+}
+.allprojectsec .card a{
+  color: #f87765;
+  font-size: 25px;
+  text-decoration: none;
+}
+/*End Projects Component*/
+
+/***********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px){
+  .bannar {
+    padding: 0;
   }
-  to {
+  .bannar .bannartext {
+    padding-top: 50px;
+  }
+  .bannar .bannartext h1 ,.bannar .bannartext h2{
+    font-size: 30px;
+  }
+  .bannar .bannartext h5 {
+    font-size: 15px;
+  }
+  .bannarimgs{
+    padding-top: 50px;
+  }
+  .bannar .bannarimgs .waves {
+    width:320px;
+  }
+  .bannar .bannarimgs .laptop {
+    width: 290px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+  }
+  .bannar .imgbox {
+    padding: 20px;
+    width: 60px;
+    height: 60px;
+  }
+  .imgbox img {
+    width: 36px;
+  }
+  .bannar .gimg {
+    left: 35px;
+    bottom: 180px;
+  }
+  .bannar .wimg {
+    left: 200px;
+  }
+  .bannar .uimg {
+    right: 30px;
+    bottom: 100px;
+  }
+  .homesec2 .row{
+    flex-direction: column-reverse;
+    padding-top: 50px;
+  }
+  .homesec2 .secimgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .homesec2 .waves {
+    padding-top: 10px;
+    width: 100%;
+    transform: rotate(360deg)
+  }
+  .homesec2 .people {
+    position: absolute;
+    width: 80%;
+    top: 25%;
+    left: 10%;
+  }
+  .homesec3 .sectext{
+    padding: 0px;
+  }
+  .homesec3 .sectext h3{
+    font-size: 30px;
+    padding-left: 20px;
+  }
+  .allprojectsec{
+    background-color: #070707;
+    padding: 10px;
+    position: relative;
+  }
+  .allprojectsec h3{
+    font-size: 30px;
+  }
+  .homesec4{
+    padding: 60px 10px;
+  }
+  .homesec4 h3{
+    font-size: 40px;
+  }
+  .homesec4 .waves{
+    position: absolute;
+    top: 1%;
+    width: 100%;
+    left: -3%;
     transform: rotate(360deg);
+  }
+  .homesec4 .divLeft ,.homesec4 .divRight{
+    width: 100%;
+  }
+  .homesec5{
+    padding: 50px 10px;
+  }
+  .homesec5 .divRight img{
+    height: 280px;
+  }
+  .homesec6{
+    padding: 50px 10px;
+  }
+  .homesec6 .row{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .homesec6 .info{
+    margin-top: 100px;
+  }
+  .homesec6 div p{
+    text-align: left;
+  }
+  .homesec6 form {
+    padding: 0px;
+    width: 100%;
+    margin: -10px;
+  }
+  .homesec6 div form div{
+    display: flex;
+    flex-direction: column;
+  }
+  .homesec6 form button{
+    margin: auto;
+  }
+  footer{
+    background-color: #070707;
+    padding:0px;
+  }
+  footer img{
+    width: 200px;
+  }
+  footer .llink {
+    display: flex;
+    
+  }
+  footer .iconsdiv{
+    display: flex  !important;
+    justify-content: flex-start;
+  }
+  footer .iconsdiv svg{
+    padding-left: 8px;
+    font-size: 40px;
+  }
+  footer .copyright{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin: 20px 0;
+    color: white;
+    font-size: 12px;
+  }
+  footer .copyright p:nth-child(2) {
+    margin-left: 20px;
   }
 }
