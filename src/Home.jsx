@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useRef } from 'react'
 import { Container,Row,Col } from 'react-bootstrap'
 import { HashLink } from 'react-router-hash-link'
 import { Link } from 'react-router-dom';
@@ -6,6 +6,7 @@ import axios from "axios"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import emailjs from '@emailjs/browser';
 import Footer from './Footer';
 
 
@@ -18,6 +19,18 @@ const Home = () => {
             setprojects(res.data.projects)
         })
     },[]) 
+
+    const form = useRef();
+    const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_zz882ha', 'template_h23zo36', form.current, 'ODQYkA861EeS7eP9q')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        e.target.reset();
+    };
 return (
     <>
         <section className='bannar' id="bannar">
@@ -178,7 +191,7 @@ return (
                     </Col>
                     <Col md="6" sm='12' className="wow bounceInRight" data-wow-duration="2s" data-wow-delay="0.3s">
                         <div>
-                            <form>
+                            <form ref={form} onSubmit={sendEmail}>
                                 <div className='d-flex'>
                                     <input type="text" name='name' placeholder='Name'/>
                                     <input type="text" name='company' placeholder='Company'/>
@@ -188,7 +201,7 @@ return (
                                     <input type="text" name='phone' placeholder='Phone'/>
                                 </div>
                                 <textarea name='message' placeholder='Message'></textarea>
-                                <button>Send Message</button>
+                                <button type="submit">Send Message</button>
                             </form>
                         </div>
                     </Col>

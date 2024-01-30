@@ -346,6 +346,7 @@ body{
 .homesec6 form textarea{
   min-height: 200px;
   max-height: 200px;
+  padding: 20px;
 }
 .homesec6 form input::placeholder,
 .homesec6 form textarea::placeholder {
@@ -414,22 +415,7 @@ footer .copyright p:nth-child(2) {
   margin-left: 20px;
 }
 
-
 /*End Footer*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /***********************************/
 /*Start Projects Component*/
@@ -475,17 +461,6 @@ footer .copyright p:nth-child(2) {
 /*End Projects Component*/
 
 /***********************************/
-
-
-
-
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 1000px){
   .bannar {
@@ -615,6 +590,7 @@ footer .copyright p:nth-child(2) {
     margin: auto;
   }
   footer{
+    height: 60dvh;
     background-color: #070707;
     padding:0px;
   }
