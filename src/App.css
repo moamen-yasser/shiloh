@@ -194,6 +194,9 @@ body{
   text-decoration: none;
   font-size: 20px;
 }
+.homesec3 .swiper{
+  height: 60vh;
+}
 .homesec3 .swiper-slide {
   padding: 20px;
 }
@@ -207,7 +210,7 @@ body{
   width: 15px;
 }
 .homesec3 .swiper-pagination {
-  bottom: 0 !important;
+  top: 360px !important;
 }
 /*End Home Section 3 */
 
